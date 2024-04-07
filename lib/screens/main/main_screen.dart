@@ -26,22 +26,25 @@ class MainScreen extends StatelessWidget {
       drawer: SideMenu(),
       body: Center(
           child: Container(
-        constraints: BoxConstraints(maxWidth: maxWidth),
+        constraints: const BoxConstraints(maxWidth: maxWidth),
         child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
           if (Responsive.isDesktop(context))
-            Expanded(
+            const Expanded(
               flex: 2,
               child: SideMenu(),
             ),
-          SizedBox(width: defaultPadding),
+          const SizedBox(width: defaultPadding),
           Expanded(
             flex: 7,
             child: SingleChildScrollView(
-                child: Column(
-              children: [
-                ...children,
-                // Our Footer
-              ],
+                child: Padding(
+              padding: const EdgeInsets.only(right: 14.0),
+              child: Column(
+                children: [
+                  ...children,
+                  // Our Footer
+                ],
+              ),
             )),
           ),
         ]),

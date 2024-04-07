@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../constants.dart';
 
@@ -11,7 +12,8 @@ class CV extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: () => launch(
+          'https://drive.google.com/file/d/1Ja79b3Avte7TlGp4q83Nd61Sys39gHzo/view?usp=drive_link'),
       child: FittedBox(
         child: Row(
           children: [

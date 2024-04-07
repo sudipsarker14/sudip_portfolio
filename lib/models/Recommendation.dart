@@ -4,6 +4,7 @@ class Recommendation {
   Recommendation({this.name, this.source, this.text});
 }
 
+/*
 final List<Recommendation> demo_recommendations = [
   Recommendation(
     name: "Kolapo Obanewa",
@@ -28,5 +29,30 @@ final List<Recommendation> demo_recommendations = [
     source: "YouTube",
     text:
         "Very straightforward, professional and also the best flutter videos in the youtube! It will be great if you add some comments to your steps with 0.5 seconds pause before implementing this step. By meaning of steps, I mean not the basic, but structural steps, like 10-20 steps per video. However, thank you very much!",
+  ),
+];*/
+final List<Recommendation> demo_recommendations = [
+  Recommendation(
+    name: "International leadership Education Program 2022",
+    source: "U.S. Embassy & GEIST foundation.",
+    text: "Working as a volunteer at this program",
+  ),
+  Recommendation(
+    name: "AI Master Class (30 Days)",
+    source: "Pantech Prolabs India Pvt Ltd.",
+    text:
+        "Participate AI Master Class (30 Days) at Pantech Prolabs India Pvt Ltd.",
+  ),
+  Recommendation(
+    name: "Python Libraries for Machine Learning",
+    source: "Great Learning Academy",
+    text:
+        " I have successfully completed the Python Libraries for Machine Learning course offered by Great Learning Academy.",
+  ),
+  Recommendation(
+    name: "Serverless SQL in Azure Synapse",
+    source: "Styava",
+    text:
+        "Participate Intro to Serverless SQL in Azure Synapse organized by Styava.",
   ),
 ];

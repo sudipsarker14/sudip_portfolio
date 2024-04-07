@@ -32,7 +32,7 @@ class Skills extends StatelessWidget {
             SizedBox(width: defaultPadding),
             Expanded(
               child: AnimatedCircularProgressIndicator(
-                percentage: 0.65,
+                percentage: 0.75,
                 label: "Python",
               ),
             ),
@@ -40,7 +40,7 @@ class Skills extends StatelessWidget {
             Expanded(
               child: AnimatedCircularProgressIndicator(
                 percentage: 0.7,
-                label: "Java",
+                label: "Data Analysis",
               ),
             ),
             SizedBox(width: defaultPadding),

@@ -14,10 +14,10 @@ class HomeBanner extends StatelessWidget {
     return AspectRatio(
       aspectRatio: Responsive.isMobile(context) ? 2.5 : 3,
       child: Stack(
-        fit: StackFit.expand,
+        fit: StackFit.loose,
         children: [
           Image.asset(
-            "assets/images/bg.jpeg",
+            "assets/images/banner2.png",
             fit: BoxFit.cover,
           ),
           Container(color: darkColor.withOpacity(0.66)),

@@ -25,7 +25,7 @@ class MyBuildAnimatedText extends StatelessWidget {
                 : AnimatedText(),
             if (!Responsive.isMobileLarge(context))
               SizedBox(width: defaultPadding / 2),
-            if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
+            if (!Responsive.isMobileLarge(context)) FlutterCodedText2(),
           ],
         ));
   }
@@ -69,7 +69,29 @@ class FlutterCodedText extends StatelessWidget {
         text: "<",
         children: [
           TextSpan(
-            text: "flutter",
+            text: "Sudip",
+            style: TextStyle(color: primaryColor),
+          ),
+          TextSpan(text: ">"),
+        ],
+      ),
+    );
+  }
+}
+
+class FlutterCodedText2 extends StatelessWidget {
+  const FlutterCodedText2({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text.rich(
+      TextSpan(
+        text: "<",
+        children: [
+          TextSpan(
+            text: "Sarker",
             style: TextStyle(color: primaryColor),
           ),
           TextSpan(text: ">"),
