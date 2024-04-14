@@ -19,7 +19,7 @@ class SocialMedia extends StatelessWidget {
           Spacer(),
           IconButton(
             onPressed: () =>
-                launch('https://www.linkedin.com/in/sudipsarker1411/'),
+                launch('https://www.linkedin.com/in/sudipsarker14/'),
             icon: SvgPicture.asset("assets/icons/linkedin.svg"),
           ),
           /*IconButton(

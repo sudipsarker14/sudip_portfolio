@@ -13,54 +13,57 @@ class HomeBanner extends StatelessWidget {
   Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: Responsive.isMobile(context) ? 2.5 : 3,
-      child: Stack(
-        fit: StackFit.loose,
-        children: [
-          Image.asset(
-            "assets/images/banner2.png",
-            fit: BoxFit.cover,
-          ),
-          Container(color: darkColor.withOpacity(0.66)),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Discover my Amazing \nArt Space!",
-                  style: Responsive.isDesktop(context)
-                      ? Theme.of(context).textTheme.displaySmall!.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          )
-                      : Theme.of(context).textTheme.headlineSmall!.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                ),
-                if (Responsive.isMobileLarge(context))
-                  const SizedBox(height: defaultPadding / 2),
-                MyBuildAnimatedText(),
-                SizedBox(height: defaultPadding),
-                if (!Responsive.isMobileLarge(context))
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: defaultPadding * 2,
-                          vertical: defaultPadding),
-                      backgroundColor: primaryColor,
-                    ),
-                    child: Text(
-                      "Explore Now",
-                      style: TextStyle(color: darkColor),
-                    ),
-                  ),
-              ],
+      child: Padding(
+        padding: const EdgeInsets.only(top: 12.0),
+        child: Stack(
+          fit: StackFit.loose,
+          children: [
+            Image.asset(
+              "assets/images/banner2.png",
+              fit: BoxFit.cover,
             ),
-          ),
-        ],
+            Container(color: darkColor.withOpacity(0.66)),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Discover my Amazing \nArt Space!",
+                    style: Responsive.isDesktop(context)
+                        ? Theme.of(context).textTheme.displaySmall!.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            )
+                        : Theme.of(context).textTheme.headlineSmall!.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                  ),
+                  if (Responsive.isMobileLarge(context))
+                    const SizedBox(height: defaultPadding / 2),
+                  MyBuildAnimatedText(),
+                  SizedBox(height: defaultPadding),
+                  if (!Responsive.isMobileLarge(context))
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: TextButton.styleFrom(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: defaultPadding * 2,
+                            vertical: defaultPadding),
+                        backgroundColor: primaryColor,
+                      ),
+                      child: Text(
+                        "Explore Now",
+                        style: TextStyle(color: darkColor),
+                      ),
+                    ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
